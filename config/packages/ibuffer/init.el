@@ -1,0 +1,1 @@
+(defalias 'list-buffers 'ibuffer) ;; отдельный список буферов при нажатии C-x C-b

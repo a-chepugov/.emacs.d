@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: <h1>DEBUG</n1>
+# key: qq
+# --
+<h1>DEBUG:${1:`(file-name-nondirectory (buffer-file-name))`}:${2:`(line-number-at-pos)`}</h1>

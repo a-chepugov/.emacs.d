@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: console.dir(arguments)
+# key: cda
+# --
+console.dir(arguments, {colors: true, depth: null});

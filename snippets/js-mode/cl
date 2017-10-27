@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: console.log
+# key: cl
+# --
+console.log('DEBUG:${1:`(file-name-nondirectory (buffer-file-name))`}:${2:`(line-number-at-pos)`}$0);
