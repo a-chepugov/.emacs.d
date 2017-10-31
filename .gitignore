@@ -1,3 +1,6 @@
+/.idea/
 /elpa/
 /auto-save-list/
 /bookmarks
+/projectile.cache
+/projectile-bookmarks.eld

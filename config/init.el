@@ -4,20 +4,20 @@
 
 
 ;; Disable GUI components
-;(tooltip-mode      -1)
-;(menu-bar-mode     -1) ;; отключаем графическое меню
+;;(tooltip-mode      -1)
+;;(menu-bar-mode     -1) ;; отключаем графическое меню
 (tool-bar-mode     -1) ;; отключаем tool-bar
-;(scroll-bar-mode   -1) ;; отключаем полосу прокрутки
-;(blink-cursor-mode -1) ;; курсор не мигает
-;(setq use-dialog-box     nil) ;; никаких графических диалогов и окон - все через минибуфер
+;;(scroll-bar-mode   -1) ;; отключаем полосу прокрутки
+;;(blink-cursor-mode -1) ;; курсор не мигает
+;;(setq use-dialog-box     nil) ;; никаких графических диалогов и окон - все через минибуфер
 (setq redisplay-dont-pause t)  ;; лучшая отрисовка буфера
 (setq ring-bell-function 'ignore) ;; отключить звуковой сигнал
 
 
 ;; Disable backup/autosave files
-(setq make-backup-files        t)
+(setq make-backup-files        nil)
 (setq auto-save-default        nil)
-(setq auto-save-list-file-name nil) ;; я так привык... хотите включить - замените nil на t
+(setq auto-save-list-file-name nil)
 
 
 ;; Fringe settings
@@ -33,19 +33,6 @@
 ;; Clipboard settings
 (setq x-select-enable-clipboard t) ;; Общий с ОС буфер обмена:
 
-
 ;; Highlight search resaults
 (setq search-highlight        t) ;;Выделять результаты поиска
 (setq query-replace-highlight t)
-
-
-
-;; Bookmark settings
-(require 'bookmark)
-(setq bookmark-save-flag t) ;; автоматически сохранять закладки в файл
-(when (file-exists-p (concat user-emacs-directory "bookmarks"))
-    (bookmark-load bookmark-default-file t)) ;; попытаться найти и открыть файл с закладками
-(global-set-key (kbd "<f3>") 'bookmark-set) ;; создать закладку по F3
-(global-set-key (kbd "<f4>") 'bookmark-jump) ;; прыгнуть на закладку по F4
-(global-set-key (kbd "<f5>") 'bookmark-bmenu-list) ;; открыть список закладок
-(setq bookmark-default-file (concat user-emacs-directory "bookmarks")) ;; хранить закладки в файл bookmarks в .emacs.d
