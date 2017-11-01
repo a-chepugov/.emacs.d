@@ -10,7 +10,9 @@
 ;;(blink-cursor-mode -1) ;; курсор не мигает
 ;;(setq use-dialog-box     nil) ;; никаких графических диалогов и окон - все через минибуфер
 (setq redisplay-dont-pause t)  ;; лучшая отрисовка буфера
-(setq ring-bell-function 'ignore) ;; отключить звуковой сигнал
+
+(setq visible-bell t) ;; сделать звуковый сигнал визуальным
+;;(setq ring-bell-function 'ignore) ;; отключить звуковой сигнал
 
 ;; Disable backup/autosave files
 (setq make-backup-files        nil)
