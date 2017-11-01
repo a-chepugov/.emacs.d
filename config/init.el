@@ -2,26 +2,23 @@
 (load (get-relative-file-path "./global-mode/init"))
 (load (get-relative-file-path "./auto-mode"))
 
-
-;; Disable GUI components
-;;(tooltip-mode      -1)
-;;(menu-bar-mode     -1) ;; отключаем графическое меню
+;; GUI components
 (tool-bar-mode     -1) ;; отключаем tool-bar
+;;(menu-bar-mode     -1) ;; отключаем графическое меню
+;;(tooltip-mode      -1) ;; показывать помощь только в echo-области
 ;;(scroll-bar-mode   -1) ;; отключаем полосу прокрутки
 ;;(blink-cursor-mode -1) ;; курсор не мигает
 ;;(setq use-dialog-box     nil) ;; никаких графических диалогов и окон - все через минибуфер
 (setq redisplay-dont-pause t)  ;; лучшая отрисовка буфера
 (setq ring-bell-function 'ignore) ;; отключить звуковой сигнал
 
-
 ;; Disable backup/autosave files
 (setq make-backup-files        nil)
 (setq auto-save-default        nil)
 (setq auto-save-list-file-name nil)
 
-
 ;; Fringe settings
-(fringe-mode '(8 . 0)) ;; органичиталь текста только слева
+(fringe-mode '(8 . 0)) ;; ограничитель текста только слева
 (setq-default indicate-empty-lines t) ;; отсутствие строки выделить глифами рядом с полосой с номером строки
 (setq-default indicate-buffer-boundaries 'left) ;; индикация только слева
 
@@ -31,8 +28,13 @@
 (size-indication-mode          t) ;; размер файла в %-ах
 
 ;; Clipboard settings
-(setq x-select-enable-clipboard t) ;; Общий с ОС буфер обмена:
+(setq x-select-enable-clipboard t) ;; Общий с ОС буфер обмена
 
-;; Highlight search resaults
-(setq search-highlight        t) ;;Выделять результаты поиска
+;; Highlight search results
+(setq search-highlight        t) ;; Выделять результаты поиска
 (setq query-replace-highlight t)
+
+(setq-default truncate-lines t) ;; Усекать отображение строк, превышающих экран
+
+;; Цветовая схема
+(invert-face 'default)
