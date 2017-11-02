@@ -5,6 +5,15 @@
 	)
 
 (setq bookmark-save-flag t) ;; автоматически сохранять закладки в файл
-(global-set-key (kbd "<f3>") 'bookmark-set) ;; создать закладку по F3
+
+(defun bookmark-set+ (s)
+	(interactive "sSet bookmark:")
+	(let ((name (concat (file-name-nondirectory (buffer-file-name)) ":" (number-to-string (line-number-at-pos)))))
+		(bookmark-set name)
+	)
+)
+
+;;(global-set-key (kbd "<f3>") 'bookmark-set) ;; создать закладку по F3
+(global-set-key (kbd "<f3>") 'bookmark-set+) ;; создать закладку по F3
 (global-set-key (kbd "<f4>") 'bookmark-jump) ;; прыгнуть на закладку по F4
 (global-set-key (kbd "<f5>") 'bookmark-bmenu-list) ;; открыть список закладок
