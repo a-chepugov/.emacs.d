@@ -1,6 +1,3 @@
-(setq inhibit-startup-screen t)
-(switch-to-buffer "*Messages*")
-
 (defun this-file-dir () (file-name-directory load-file-name))
 (defun get-relative-file-path (file-name) (expand-file-name file-name (this-file-dir)))
 (defun get-package-name-by-dir (file-name) (car (last (split-string file-name "/") 2 )))

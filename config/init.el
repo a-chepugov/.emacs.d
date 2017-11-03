@@ -1,5 +1,8 @@
 (load (get-relative-file-path "./init-functions"))
 
+(setq inhibit-startup-screen t)
+(switch-to-buffer "*Messages*")
+
 (load (get-relative-file-path "./packages/init"))
 (load (get-relative-file-path "./global-mode/init"))
 (load (get-relative-file-path "./auto-mode"))
