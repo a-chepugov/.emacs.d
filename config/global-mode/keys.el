@@ -7,3 +7,7 @@
 ;; отмена действия
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 (global-set-key (kbd "C-<escape>")  'keyboard-quit)
+
+(global-set-key (kbd "C-c C-i")  'invert-face+) ;; инвертирование цветовой схемы
+
+(global-set-key (kbd "C-<f4>")  'kill-buffer) ;; уничтожить буфер

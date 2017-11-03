@@ -1,3 +1,5 @@
+(load (get-relative-file-path "./init-functions"))
+
 (load (get-relative-file-path "./packages/init"))
 (load (get-relative-file-path "./global-mode/init"))
 (load (get-relative-file-path "./auto-mode"))
@@ -36,7 +38,7 @@
 (setq search-highlight        t) ;; Выделять результаты поиска
 (setq query-replace-highlight t)
 
-(setq-default truncate-lines t) ;; Усекать отображение строк, превышающих экран
+(setq-default truncate-lines t) ;; Усекать отображение строк, выходящих за размер окна
 
 ;; Цветовая схема
 (invert-face 'default)
