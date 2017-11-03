@@ -1,3 +1,3 @@
-(global-set-key (kbd "<f12>") 'sr-speedbar-toggle)
+(global-set-key (kbd "<f12>") 'speedbar)
 (setq speedbar-show-unknown-files t)
 (setq speedbar-use-images t)
