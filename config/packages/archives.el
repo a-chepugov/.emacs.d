@@ -8,8 +8,5 @@
 ;; Добавляет новые, но нестабильные пакеты
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
-;; Инициализируем пакеты
-(package-initialize)
-
 ;; Получаем список пакетов
 (unless package-archive-contents(package-refresh-contents))
