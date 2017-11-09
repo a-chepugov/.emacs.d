@@ -1,1 +1,1 @@
-(global-set-key (kbd "<f2>") 'bs-show) ;; запуск buffer selection кнопкой F2
+(global-set-key (kbd "<f2>") 'bs-show)

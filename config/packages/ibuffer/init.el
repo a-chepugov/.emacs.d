@@ -1,1 +1,1 @@
-(defalias 'list-buffers 'ibuffer) ;; отдельный список буферов при нажатии C-x C-b
+(global-set-key (kbd "M-<f2>") 'ibuffer)
