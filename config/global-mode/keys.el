@@ -11,6 +11,9 @@
 
 (global-set-key (kbd "C-<f4>") 'kill-buffer) ;; уничтожить буфер
 
+(global-set-key (kbd "C-<f12>") 'shell)
+(global-set-key (kbd "M-<f12>") 'shell-command-on-region)
+
 ;; дублировать строку или область
 (global-set-key (kbd "C-c d") 'duplicate-current-line-or-region)
 (global-set-key (kbd "C-c C-d") 'duplicate-current-line-or-region)
