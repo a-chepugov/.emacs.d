@@ -46,5 +46,7 @@
 
 (setq-default truncate-lines t) ;; Усекать отображение строк, выходящих за размер окна
 
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 ;; Цветовая схема
 (invert-face 'default)
